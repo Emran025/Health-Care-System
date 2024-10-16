@@ -138,31 +138,6 @@
 
 - ##### **التكامل مع بقية المنظومة**
     يُعتبر تطبيق السجلات الطبية الجزء الأول والأساسي من المنظومة الصحية المتكاملة، وسيتم دمجه لاحقاً مع نظام المستشفيات ومكاتب الصحة والتطبيق الخاص بالطلاب والعاملين في القطاع الصحي. هذا التكامل سيسمح بتدفق البيانات بشكل سلس بين الجهات المختلفة، مما يُحسّن من كفاءة النظام الصحي بشكل عام.
-
-- ##### التقنيات المستخدمة في تطوير تطبيق السجلات الطبية:
-    - **إطار العمل (Framework) المستخدم: Flutter**  
-    تم استخدام **Flutter** كإطار عمل لتطوير تطبيق السجلات الطبية، وذلك لعدة أسباب:
-        - **دعم الأنظمة المتعددة**: Flutter يدعم تطوير تطبيقات متعددة الأنظمة (iOS و Android) باستخدام كود واحد، مما يقلل من تكلفة ووقت التطوير.
-        - **أداء عالٍ وسرعة في التنفيذ**: يعتمد Flutter على محرك قوي يوفر أداءً سلساً وسريعاً للتطبيقات، مما يساهم في تجربة مستخدم مميزة.
-        - **مرونة في واجهات المستخدم**: يقدم Flutter أدوات مرنة لتصميم واجهات المستخدم (UI)، مما يسهم في تقديم تجربة تفاعلية سلسة ومتقدمة للمستخدمين.
-
-    - **قاعدة البيانات: MySQL**  
-        لإدارة وتخزين البيانات الطبية الخاصة بالمرضى، تم استخدام قاعدة البيانات **MySQL**. وتم اختيار MySQL للأسباب التالية:
-        - **قابلية التوسع والموثوقية**:
-             MySQL تُعتبر قاعدة بيانات مفتوحة المصدر ذات أداء قوي وقادرة على التعامل مع كميات كبيرة من البيانات بشكل موثوق وفعال.
-        - **إدارة المعاملات (Transactions)**:
-            بفضل دعم MySQL لإدارة المعاملات، يمكن تنفيذ العمليات الحساسة (مثل تعديل أو تحديث السجلات) بشكل آمن، مع القدرة على التراجع في حال حدوث خطأ.
-        - **الدعم الأمني**:
-            توفر MySQL آليات متقدمة لإدارة أمن البيانات وحمايتها من الوصول غير المصرح به، وهو أمر بالغ الأهمية في التعامل مع بيانات المرضى الحساسة.
-
-    - **ربط التطبيق بقاعدة البيانات باستخدام APIs**  
-        تم استخدام **APIs (واجهة برمجة التطبيقات)** كوسيط للربط بين تطبيق Flutter وقاعدة بيانات MySQL. السبب في استخدام الـ APIs يشمل:
-        - **فصل الواجهة الأمامية عن الخلفية**:
-             استخدام الـ APIs يتيح فصل تطبيق الواجهة الأمامية (Flutter) عن الخلفية (MySQL)، مما يسهل إدارة التحديثات والصيانة في أي منهما دون التأثير على الآخر.
-        - **أمان البيانات**:
-            باستخدام واجهات API مشفرة، يمكن ضمان انتقال البيانات بين التطبيق وقاعدة البيانات بشكل آمن.
-        - **سهولة التوسع**:
-            الـ APIs تسهل إضافة ميزات جديدة أو الربط بأنظمة أخرى مستقبلًا دون الحاجة لإعادة بناء البنية الأساسية للتطبيق.
             
 >**ملاحظة :** هذا رابط دراسة جدوى التطبيق الطبي بشكل منفرد مع توضيع بعض التوابع والية العمل 
 
@@ -301,6 +276,62 @@
         5 متخصصين في التسويق الصحي.
     - **فريق التدريب**:
         3 مدربين متخصصين في النظام الصحي.
+
+### التقنيات المستخدمة في تطوير النظام الصحي المتكامل
+
+في إطار تطوير النظام الصحي المتكامل الذي يشمل تطبيق السجلات الطبية، منظومة المستشفيات، ومنظومة مكاتب الصحة، بالإضافة إلى تطبيق خاص بالطلاب والكادر الصحي، تم اعتماد مجموعة من التقنيات الحديثة. هذه التقنيات تم اختيارها بعناية لتلبية المتطلبات المتعددة المتعلقة بالكفاءة والأمان وسهولة الصيانة والتطوير المستمر. فيما يلي تفصيل لكل تقنية وأسباب اختيارها:
+
+
+- #### **Flutter لتطبيق السجلات الطبية وتطبيق الطلاب والكادر الصحي:**
+    **Flutter** هو إطار عمل مفتوح المصدر طورته **Google** ويُستخدم لتطوير التطبيقات عبر منصات متعددة باستخدام قاعدة كود واحدة. تم اختياره لتطوير تطبيق السجلات الطبية وتطبيق الطلاب والكادر الصحي لعدة أسباب رئيسية:
+
+    - **التطوير متعدد المنصات:** Flutter يسمح بكتابة كود واحد ليعمل على كل من **iOS** و**Android**، مما يختصر الكثير من الوقت والجهد في التطوير والصيانة. هذا يعني أنك لن تحتاج إلى تطوير نسختين منفصلتين للتطبيق لكل نظام تشغيل.
+    
+    - **واجهة مستخدم متقدمة:** Flutter يدعم تطوير واجهات مستخدم حديثة وجذابة باستخدام مكتبة **Widgets** الخاصة به. هذا يساعد في تقديم تجربة استخدام متسقة وسهلة للمستخدمين على مختلف الأجهزة.
+
+    - **أداء عالي وسرعة الاستجابة:** بفضل محرك الرسوميات عالي الأداء، يمكن لتطبيقات Flutter تقديم تجربة سلسة وسريعة حتى على الأجهزة منخفضة الأداء. هذا مهم بشكل خاص في التطبيقات الصحية حيث تحتاج البيانات إلى عرضها وتحديثها بسرعة.
+
+    - **تكامل مع APIs:** باستخدام **APIs**، يمكن للتطبيقات التواصل مع الخوادم والأنظمة الخلفية مثل أنظمة المستشفيات والمكاتب الصحية. البيانات مثل السجلات الطبية، التحديثات الصحية، المواعيد، التذكيرات، وما إلى ذلك، يتم استردادها وتحديثها عبر تلك الواجهات.
+
+    - **إدارة الطلاب والكادر الصحي:** تطبيق Flutter للطلاب والكادر الصحي سيتيح للطلاب الوصول إلى السجلات الطبية لأغراض تعليمية بطريقة آمنة ومنظمة، بينما سيتمكن الكادر الصحي من استخدام التطبيق لمتابعة تراخيصهم المهنية، التقديم على فرص عمل، مراقبة الرواتب، والتعاون مع زملائهم.
+
+- #### **Laravel في منظومة المستشفيات ومنظومة مكاتب الصحة:**
+    **Laravel** هو إطار عمل يعتمد على لغة **PHP** ويتميز بالقوة والمرونة في تطوير الأنظمة الخلفية. في منظومة المستشفيات ومكاتب الصحة، تم اختيار Laravel لعدة مزايا أساسية:
+
+    - **نظام إدارة قواعد البيانات:** باستخدام **Eloquent ORM** الخاص بـ Laravel، يمكن التعامل مع قواعد البيانات مثل **MySQL** بطريقة مرنة وسهلة. Eloquent يساعد في إنشاء الاستعلامات المعقدة وإدارة البيانات بدون الحاجة إلى كتابة الكثير من الأكواد المعقدة.
+
+    - **الأمان:** Laravel يأتي مع مجموعة من ميزات الأمان مثل حماية **CSRF** و**SQL Injection**، مما يضمن حماية البيانات الحساسة مثل السجلات الطبية وبيانات المستشفيات والموظفين. في تطبيقات الرعاية الصحية، الأمان هو أمر بالغ الأهمية لحماية البيانات الشخصية للمرضى.
+
+    - **بناء واجهات برمجة التطبيقات (APIs):** Laravel يدعم بناء واجهات برمجة التطبيقات المتوافقة مع REST، مما يسهل عملية التكامل بين الأنظمة الأمامية مثل تطبيقات Flutter والأنظمة الخلفية. يمكن استخدام APIs لربط مختلف الخدمات في النظام وضمان تدفق سلس للبيانات.
+
+    - **إدارة العمليات المعقدة:** Laravel يتيح بناء عمليات معقدة في منظومة المستشفيات، مثل جدولة المواعيد، إدارة الأقسام والموظفين، تتبع المخزون الطبي، والمزيد. مرونة Laravel تجعله ملائمًا لبناء نظام قادر على النمو والتوسع مع مرور الوقت.
+
+- #### **MySQL كقاعدة بيانات مركزية:**
+    تم اعتماد **MySQL** كقاعدة بيانات مركزية لإدارة البيانات في النظام الصحي المتكامل. وهي قاعدة بيانات مفتوحة المصدر تعتمد على **SQL** وتتميز بالاستقرار والأداء العالي، مما يجعلها خيارًا مثاليًا للأنظمة التي تتطلب إدارة بيانات كبيرة ومعقدة مثل النظام الصحي.
+
+    - **تخزين البيانات الصحية:** قاعدة بيانات MySQL تخزن بيانات المرضى مثل السجلات الطبية، المواعيد، والعلاجات، بالإضافة إلى بيانات المستشفيات والمكاتب الصحية مثل الأقسام والموظفين.
+    
+    - **الأداء العالي وقابلية التوسع:** MySQL يمكنها معالجة كميات كبيرة من البيانات مع الحفاظ على الأداء العالي، مما يسمح للنظام بالتوسع مع زيادة عدد المستخدمين والبيانات المخزنة.
+    
+    - **تكامل سلس مع Laravel وFlutter:** MySQL تتكامل بشكل ممتاز مع **Laravel**، الذي يدير الاتصال بين قاعدة البيانات والتطبيقات الأمامية مثل تطبيق Flutter، مما يتيح مزامنة البيانات بشكل سريع وآمن.
+
+- #### **APIs لربط الأنظمة المختلفة:**
+    لربط الأنظمة المتعددة مثل تطبيقات **Flutter** مع الأنظمة الخلفية في المستشفيات والمكاتب الصحية، تم تطوير مجموعة من واجهات برمجة التطبيقات **(APIs)**. هذه الواجهات تسمح بتبادل البيانات بسلاسة بين مختلف التطبيقات والأنظمة.
+
+    - **مزامنة البيانات:** APIs تساعد في مزامنة بيانات المرضى بين النظام الخلفي وتطبيقات الهواتف الذكية، مثل تحديث السجلات الطبية أو جدولة المواعيد.
+    
+    - **تكامل الأنظمة:** APIs تسهل ربط مختلف الأنظمة، مما يسمح بإضافة خدمات جديدة أو تكامل مع أنظمة خارجية بسهولة دون الحاجة إلى تعديل كبير في البنية التحتية.
+    
+    - **أمان البيانات:** تم تأمين APIs بميزات التشفير والمصادقة لضمان حماية البيانات الحساسة عند نقلها بين الأنظمة.
+
+- #### **التكامل مع الخدمات السحابية:**
+    لضمان أن النظام متاح دائمًا ويمكن الوصول إليه من أي مكان، تم تصميمه ليعمل على **الخدمات السحابية** مثل **AWS** أو **Google Cloud**. هذه الخدمات توفر ميزات متعددة، مثل:
+
+    - **النسخ الاحتياطي التلقائي:** تخزين النسخ الاحتياطية للبيانات بشكل دوري على السحابة يضمن أن البيانات ستكون متاحة في حال حدوث أي مشكلة تقنية.
+    
+    - **قابلية التوسع:** الخدمات السحابية تسمح بتوسيع قدرة النظام حسب الحاجة، سواء من حيث تخزين البيانات أو عدد المستخدمين، مما يجعل النظام مستعدًا لأي زيادة مستقبلية في الطلب.
+
+    - **إمكانية الوصول العالمي:** نظرًا لأن النظام يعمل على السحابة، يمكن للمستخدمين الوصول إليه من أي مكان في العالم باستخدام الأجهزة المتصلة بالإنترنت، مما يجعله أكثر مرونة وسهولة في الاستخدام.
 
 ### خطة التسويق
 - #### الجمهور المستهدف:
@@ -516,31 +547,6 @@ The medical records application is the primary focus at this stage of the projec
 - ##### **Integration with the Rest of the System**:
     The medical records application is the first and foundational part of the integrated health system. It will later be linked with the hospital management system, health offices, and the app for students and healthcare workers. This integration will allow seamless data flow between different entities, improving overall healthcare system efficiency.
 
-- ##### Technologies Used in Developing the Medical Records Application:
-    - **Framework Used: Flutter**  
-    **Flutter** was chosen as the framework for developing the medical records application for several reasons:
-        - **Multi-platform Support**: Flutter supports the development of cross-platform applications (iOS and Android) using a single codebase, which reduces both development time and costs.
-        - **High Performance and Speed**: Flutter relies on a powerful engine that provides smooth and fast application performance, contributing to an exceptional user experience.
-        - **Flexible User Interfaces**: Flutter offers flexible tools for designing user interfaces (UI), enabling the delivery of a seamless and advanced interactive experience for users.
-
-    - **Database: MySQL**  
-        **MySQL** was used to manage and store patients' medical data, selected for the following reasons:
-        - **Scalability and Reliability**:  
-            MySQL is an open-source database with strong performance, capable of handling large volumes of data in a reliable and efficient manner.
-        - **Transaction Management**:  
-            With MySQL's support for transaction management, sensitive operations (such as record updates or modifications) can be securely executed, with the ability to roll back in case of errors.
-        - **Security Support**:  
-            MySQL provides advanced mechanisms for securing data and protecting it from unauthorized access, which is crucial when dealing with sensitive patient information.
-
-    - **Connecting the Application to the Database Using APIs**  
-        **APIs (Application Programming Interfaces)** were used as an intermediary to connect the Flutter application to the MySQL database. The reasons for using APIs include:
-        - **Separation of Frontend and Backend**:  
-            APIs allow for the separation of the frontend application (Flutter) from the backend (MySQL), making it easier to manage updates and maintenance on either side without affecting the other.
-        - **Data Security**:  
-            By using encrypted APIs, the secure transfer of data between the application and the database is ensured.
-        - **Ease of Expansion**:  
-            APIs make it easy to add new features or integrate with other systems in the future without the need to rebuild the application's core architecture.
-
 > **NOTE:** Here is a link to the feasibility study of the medical app individually with some of the dependencies and workflow 
 
 - ##### **Benefits of the Medical Records Application**:
@@ -679,6 +685,61 @@ One of the key advantages of the medical records application is the ability to u
         5 specialists in healthcare marketing.
     - **Training Team**:  
         3 trainers specializing in the healthcare system.
+
+### Technologies Used in Developing the Integrated Health System
+
+As part of the development of the integrated health system, which includes the medical records application, the hospital system, the health office system, as well as a dedicated app for students and healthcare professionals, a range of modern technologies have been adopted. These technologies were carefully selected to meet the multiple requirements of efficiency, security, ease of maintenance, and continuous development. Below is a detailed overview of each technology and the reasons for its selection:
+
+- #### **Flutter for the Medical Records Application and the Student & Healthcare Professional App:**
+    **Flutter** is an open-source framework developed by **Google**, used to build cross-platform applications with a single codebase. It was chosen for the development of the medical records application and the student and healthcare professional app for several key reasons:
+
+    - **Cross-Platform Development:** Flutter allows for writing a single codebase that works on both **iOS** and **Android**, saving significant time and effort in development and maintenance. This eliminates the need to develop separate versions of the app for each operating system.
+    
+    - **Advanced User Interface:** Flutter supports the development of modern and attractive user interfaces using its **Widgets** library. This helps deliver a consistent and easy user experience across different devices.
+
+    - **High Performance and Responsiveness:** Thanks to its high-performance rendering engine, Flutter applications provide a smooth and fast experience, even on low-end devices. This is particularly important in healthcare apps where data needs to be displayed and updated quickly.
+
+    - **Integration with APIs:** Using **APIs**, the applications can communicate with servers and backend systems such as hospital and health office systems. Data such as medical records, health updates, appointments, reminders, etc., are retrieved and updated via these interfaces.
+
+    - **Management of Students and Healthcare Professionals:** The Flutter app for students and healthcare professionals will enable students to access medical records for educational purposes in a secure and organized manner, while healthcare professionals will be able to use the app to monitor their professional licenses, apply for job opportunities, track salaries, and collaborate with colleagues.
+
+- #### **Laravel for the Hospital and Health Office Systems:**
+    **Laravel** is a framework built on **PHP**, known for its power and flexibility in backend system development. It was selected for the hospital and health office systems for several key advantages:
+
+    - **Database Management System:** With Laravel's **Eloquent ORM**, managing databases like **MySQL** becomes flexible and easy. Eloquent allows for creating complex queries and managing data without writing extensive complex code.
+
+    - **Security:** Laravel comes with built-in security features such as **CSRF protection** and protection against **SQL injection**, ensuring the safety of sensitive data such as medical records and hospital staff information. In healthcare applications, data security is paramount to protecting patients' personal information.
+
+    - **Building APIs:** Laravel supports building REST-compliant APIs, making it easier to integrate between frontend systems like Flutter applications and backend systems. APIs can be used to connect various services within the system, ensuring smooth data flow.
+
+    - **Managing Complex Operations:** Laravel allows for building complex operations within the hospital system, such as scheduling appointments, managing departments and staff, tracking medical inventory, and more. Laravel's flexibility makes it suitable for building a system capable of growing and expanding over time.
+
+- #### **MySQL as the Central Database:**
+    **MySQL** was adopted as the central database for managing data within the integrated health system. It is an open-source database based on **SQL** and is known for its stability and high performance, making it ideal for systems that require the management of large and complex data sets like the health system.
+
+    - **Storing Health Data:** MySQL stores patient data such as medical records, appointments, and treatments, as well as hospital and health office data like departments and staff.
+    
+    - **High Performance and Scalability:** MySQL can handle large amounts of data while maintaining high performance, allowing the system to scale with the increasing number of users and stored data.
+    
+    - **Seamless Integration with Laravel and Flutter:** MySQL integrates seamlessly with **Laravel**, which manages the connection between the database and frontend applications like the Flutter app, ensuring fast and secure data synchronization.
+
+- #### **APIs to Connect the Various Systems:**
+    To connect multiple systems such as **Flutter** applications with the backend systems in hospitals and health offices, a set of **APIs (Application Programming Interfaces)** was developed. These interfaces allow for smooth data exchange between the different applications and systems.
+
+    - **Data Synchronization:** APIs help synchronize patient data between the backend system and mobile applications, such as updating medical records or scheduling appointments.
+    
+    - **System Integration:** APIs facilitate the connection of various systems, allowing for the addition of new services or integration with external systems easily without major modifications to the infrastructure.
+    
+    - **Data Security:** APIs are secured with encryption and authentication features to ensure the protection of sensitive data during transmission between systems.
+
+- #### **Integration with Cloud Services:**
+    To ensure that the system is always available and accessible from anywhere, it was designed to operate on **cloud services** such as **AWS** or **Google Cloud**. These services offer multiple features, such as:
+
+    - **Automatic Backup:** Regularly storing backup data in the cloud ensures that information is available in case of any technical issues.
+    
+    - **Scalability:** Cloud services allow for expanding the system's capacity as needed, whether in terms of data storage or the number of users, making the system ready for any future increase in demand.
+
+    - **Global Accessibility:** Since the system operates in the cloud, users can access it from anywhere in the world using internet-connected devices, making it more flexible and easy to use.
 
 ### Marketing Plan:
 - #### Target Audience:
