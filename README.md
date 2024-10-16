@@ -1,3 +1,4 @@
+<div dir="rtl">
 
 ## دراسة جدوى مشروع المنظومة الصحية المتكاملة
 
@@ -402,6 +403,9 @@
 يعد مشروع المنظومة الصحية المتكاملة أحد الحلول المبتكرة لتحسين النظام الصحي في اليمن، من خلال تحسين جودة الرعاية الصحية وتقديم خدمات جديدة تعتمد على التكنولوجيا الحديثة. يركز المشروع على تطوير تطبيق السجلات الطبية كمرحلة أولى، وهو الركيزة التي سيتم بناء بقية المنظومة عليها.
 
 ---
+
+</div>
+
 ## Feasibility Study for the Integrated Health System Project
 
 ### **Introduction**
@@ -797,3 +801,5 @@ As part of the development of the integrated health system, which includes the m
 
 ### **Conclusion**:  
 The integrated healthcare system project is an innovative solution to improving the healthcare system in Yemen by enhancing the quality of care and providing new services that rely on modern technology. The project focuses on developing the medical records application as the first phase, which will serve as the foundation for the rest of the system.
+
+
