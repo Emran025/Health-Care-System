@@ -803,3 +803,7 @@ As part of the development of the integrated health system, which includes the m
 The integrated healthcare system project is an innovative solution to improving the healthcare system in Yemen by enhancing the quality of care and providing new services that rely on modern technology. The project focuses on developing the medical records application as the first phase, which will serve as the foundation for the rest of the system.
 
 
+---
+---
+---
+
